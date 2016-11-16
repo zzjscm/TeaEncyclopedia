@@ -11,7 +11,28 @@
         android:layout_height="match_parent"
         app:ptrHeaderTextColor="#aaaaaa"
         app:ptrShowIndicator="true"
-        />
+        >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:id="@+id/emptyView"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:gravity="center"
+       android:layout_centerInParent="true">
+       <ProgressBar
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/progressBar"
+           />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="努力加载中……"
+           android:textSize="12sp"
+           />
+
+   </LinearLayout>
 
     <ImageView
         android:id="@+id/backtotop"

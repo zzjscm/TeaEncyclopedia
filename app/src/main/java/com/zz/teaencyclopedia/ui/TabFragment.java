@@ -112,6 +112,7 @@ public class TabFragment extends Fragment implements AdapterView.OnItemClickList
     private ImageView mBtnTop;
     private ListView mListView;
     private MyLruCache mLruCache;
+    private LinearLayout empty;
 
     public TabFragment() {
         // Required empty public constructor
@@ -133,6 +134,7 @@ public class TabFragment extends Fragment implements AdapterView.OnItemClickList
 
     private void initView(View ret) {
         mBtnTop = (ImageView) ret.findViewById(R.id.backtotop);
+        empty = (LinearLayout) ret.findViewById(R.id.emptyView);
         mPullToReFreshListView = ((PullToRefreshListView) ret.findViewById(R.id.pullToRefreshListView));
         mPullToReFreshListView.setMode(PullToRefreshBase.Mode.BOTH);
         initLoadingLayoutProxy();
@@ -172,7 +174,7 @@ public class TabFragment extends Fragment implements AdapterView.OnItemClickList
                 break;
         }
         mPullToReFreshListView.setAdapter(mAdapter);
-
+        mPullToReFreshListView.setEmptyView(empty);
         mPullToReFreshListView.setOnItemClickListener(this);
 
     }
@@ -189,6 +191,7 @@ public class TabFragment extends Fragment implements AdapterView.OnItemClickList
     private void initViewPager() {
         mPagerAdapter = new MyPagerAdapter(mImgData);
         mViewPager.setAdapter(mPagerAdapter);
+        mViewPager.setOffscreenPageLimit(2);
         initViewPagerData();
         initPageView();
         mHandler.sendEmptyMessageDelayed(2, 3000);
