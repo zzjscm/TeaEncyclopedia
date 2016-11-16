@@ -191,7 +191,6 @@ public class TabFragment extends Fragment implements AdapterView.OnItemClickList
     private void initViewPager() {
         mPagerAdapter = new MyPagerAdapter(mImgData);
         mViewPager.setAdapter(mPagerAdapter);
-        mViewPager.setOffscreenPageLimit(2);
         initViewPagerData();
         initPageView();
         mHandler.sendEmptyMessageDelayed(2, 3000);

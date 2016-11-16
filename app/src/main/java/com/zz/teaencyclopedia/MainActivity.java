@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         mAdapter=new MyFragmentPagerAdapter(getSupportFragmentManager(),data);
         mViewPager.setAdapter(mAdapter);
         mViewPager.setPageTransformer(true, new ZoomOutSlideTransformer());
-//        mViewPager.setOffscreenPageLimit(4);
+        mViewPager.setOffscreenPageLimit(4);
     }
 
     private void initData() {
