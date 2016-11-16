@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_feedback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zz.teaencyclopedia.FeedbackActivity">
+
+    <RelativeLayout
+        android:id="@+id/topLine"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
+
+        <ImageButton
+            android:id="@+id/feedBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@mipmap/searchbackbtn"
+            android:onClick="feedbackClick"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="意见反馈"
+            android:textSize="20sp"
+            />
+
+        <ImageButton
+            android:id="@+id/backHome"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/righttopbutton"
+            android:onClick="feedbackClick"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/topLine"
+        android:background="@color/colorGreen"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topLine"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标      题:"
+                android:layout_centerVertical="true"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:layout_toRightOf="@id/textView"
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/myedit"
+                android:hint="请输入标题内容"
+                android:paddingLeft="5dp"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="反馈内容："
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:id="@+id/feedbackMsg"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp"
+            android:background="@mipmap/myedit"
+            android:hint="请输入您要反馈的内容"
+            android:textSize="15sp"
+            />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/submit"
+            android:onClick="feedbackClick"
+            />
+    </LinearLayout>
+</RelativeLayout>

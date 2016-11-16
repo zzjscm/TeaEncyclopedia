@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_welcome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zz.teaencyclopedia.WelcomeActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/welViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/slide3"
+        ></android.support.v4.view.ViewPager>
+
+    <Button
+        android:id="@+id/coming"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:background="#0fff"
+        android:onClick="click"
+        />
+
+    <LinearLayout
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/page_selector"
+            />
+
+        <ImageButton
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/page_selector"
+            />
+
+        <ImageButton
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/page_selector"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

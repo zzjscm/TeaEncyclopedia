@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_message"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zz.teaencyclopedia.MessageActivity">
+
+    <RelativeLayout
+        android:id="@+id/topLine"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
+
+        <ImageButton
+            android:id="@+id/messageBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@mipmap/searchbackbtn"
+            android:onClick="messageClick"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="版权信息"
+            android:textSize="20sp"
+            />
+
+        <ImageButton
+            android:id="@+id/backHome"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/righttopbutton"
+            android:layout_marginLeft="10dp"
+            android:onClick="messageClick"
+            />
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/topLine"
+        android:background="@color/colorGreen"
+        />
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_below="@id/topLine"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/logo"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="买买茶.茶百科"
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:layout_marginTop="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android v1.0.2"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Developer: Jason Zhu"
+            android:layout_marginTop="40dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="            茶百科，字如其名，这里只谈茶!结识茶人，学茶、品茶、悟道、继承传播中国茶文化。教你学会识茶选茶、贮存茶。更能品茶论水，赏茶雅玩。爱品茗。"
+            android:layout_marginTop="15dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copyright@2010-2013 MaiMaiCha.cn"
+            android:textColor="#000"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="买买茶 版权所有"
+            android:textColor="#000"
+            />
+
+
+    </LinearLayout>
+</RelativeLayout>

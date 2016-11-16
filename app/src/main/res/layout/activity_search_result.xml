@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zz.teaencyclopedia.SearchResultActivity">
+    <RelativeLayout
+        android:id="@+id/topLine"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
+
+        <ImageButton
+            android:id="@+id/searchBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@mipmap/searchbackbtn"
+            android:onClick="searchClick"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="茶百科"
+            android:id="@+id/searchMessage"
+            android:textSize="20sp"
+            />
+
+        <ImageButton
+            android:id="@+id/backHome"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/righttopbutton"
+            android:layout_marginLeft="10dp"
+            android:onClick="searchClick"
+            />
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/topLine"
+        android:background="@color/colorGreen"
+        />
+    <ListView
+        android:id="@+id/listView"
+        android:layout_below="@id/line"
+        android:dividerHeight="1dp"
+        android:divider="@color/colorGray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ></ListView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/empty"
+        android:layout_centerInParent="true"
+        android:text="找不到相关内容！"
+        />
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/head"
+        ></android.support.v4.view.ViewPager>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#6a404040"
+        android:layout_alignBottom="@id/head"
+        >
+        <TextView
+            android:id="@+id/headText"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:textColor="#fff"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/headContainer"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            >
+            <ImageView
+                android:id="@+id/count3"
+                android:layout_width="8dp"
+                android:src="@drawable/page_selector"
+                android:layout_height="8dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                />
+            <ImageView
+                android:id="@+id/count2"
+                android:layout_width="8dp"
+                android:src="@drawable/page_selector"
+                android:layout_height="8dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/count3"
+                android:layout_marginRight="10dp"
+                />
+            <ImageView
+                android:id="@+id/count1"
+                android:layout_width="8dp"
+                android:src="@drawable/page_selector"
+                android:layout_height="8dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/count2"
+                android:layout_marginRight="10dp"
+                />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
